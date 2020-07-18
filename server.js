@@ -22,7 +22,7 @@ const storage=multer.diskStorage({
 var upload = multer({ storage: storage })
 
 app.post('/upload',upload.single('file'),(req,res)=>{
-res.status(200).send(`http://localhost:5000/${req.file.filename}`);
+res.status(200).send(`www.file-uploader.ml/${req.file.filename}`);
 });
 
 app.get('*',(req,res)=>{
